@@ -106,7 +106,8 @@ module.exports = class NodePolyfillPlugin {
 				console: require.resolve('console-browserify'),
 				constants: require.resolve('constants-browserify'),
 				crypto: require.resolve('crypto-browserify'),
-				domain: require.resolve('domain-browser'),
+				//因为domain-browser的许可证是(MPL-2.0 OR Apache-2.0),在漏洞扫描时报中风险，这里屏蔽掉
+				// domain: require.resolve('domain-browser'),
 				events: require.resolve('events/'),
 				fs: false,
 				http: require.resolve('stream-http'),
